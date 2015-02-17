@@ -10,7 +10,7 @@
         setName: function(name){
             this.name = name;
         }
-    }
+    };
 
     m.Person = Person;
 

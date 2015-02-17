@@ -8,6 +8,10 @@
 
 *, *:before, *:after {
     box-sizing: border-box;
+    -webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+    transition: all .25s ease;
+    opacity:1
+
 }
 
 /**
@@ -44,8 +48,103 @@
  * GENERAL
  */
 
-img {max-width:100%;}
+img {
+    max-width:100%;
+}
 
+html , body{
+    height:100%
+}
+
+.centerIt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.horizontalCenter{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 body {
     transition: opacity .25s ease;
+
+    .banner{
+        width:100%;
+        height:50px;
+        background-color: #cdf;
+        border-bottom: 1px solid #aaf;
+        box-shadow: 0px 0px 4px #aaf;
+        margin-bottom: 1%;
+        text-align: center;
+        font-size: 50px;
+        text-shadow:  2px 2px 6px #aaf;
+        
+        > span {
+            // position:relative;
+            // margin-top:20px;
+            border-bottom: 1px solid #aaf;
+            box-shadow: 0px 1px 1px #aaf;
+            background-color:#cdf;
+            padding:10px;
+            border-radius:10px
+        }
+    }
+    .hidden{
+        opacity:0;
+    }
+    .viewer{
+        width:90%;
+        position:relative;
+        display: inline-block;
+        border:1px solid #aaf;
+        border-radius: 10px;
+            background-color: #eef;
+            box-shadow: 0px 0px 10px #aaf;
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 1%;
+            padding:25px;
+
+    }
+    img{
+        float:left;
+        margin:50px;
+    }
+    img::after{
+        clear:both
+    }
+    .link{
+        display:block;
+        cursor:pointer;
+        text-decoration: underline;
+    }
+    .search{
+        position:relative;
+        display: inline-block;
+        top:45px;
+        width:50%;
+        padding:20px;
+        border:1px solid #aaf;
+        border-radius: 10px;
+        line-height: 18px;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
